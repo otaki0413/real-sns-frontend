@@ -1,5 +1,6 @@
 import { Chat, Notifications, Search } from "@mui/icons-material";
 import userLogo from "../../assets/person/1.jpeg";
+import "./Topbar.css";
 
 export const Topbar = () => {
   return (
@@ -18,18 +19,22 @@ export const Topbar = () => {
         </div>
       </div>
       <div className="topbarRight">
-        <div className="icon">
-          <Chat className="chatIcon" />2
-        </div>
-        <div className="iconNotification">
-          <Notifications className="notificationIcon" />1
+        <div className="topbarItemIcons">
+          <div className="topbarItemIcon">
+            <Chat />
+            <span className="topbarIconBadge">1</span>
+          </div>
+          <div className="topbarItemIcon">
+            <Notifications />
+            <span className="topbarIconBadge">2</span>
+          </div>
+          <img
+            src={userLogo}
+            alt=""
+            className="iconUserImg"
+          />
         </div>
       </div>
-      <img
-        src={userLogo}
-        alt=""
-        className="iconUserImg"
-      />
     </div>
   );
 };
