@@ -1,4 +1,4 @@
-import React from "react";
+import userLogo from "../../assets/person/1.jpeg";
 
 export const Topbar = () => {
   return (
@@ -20,7 +20,7 @@ export const Topbar = () => {
         <div className="iconNotification">2</div>
       </div>
       <img
-        src="/assets/person/1.jpg"
+        src={userLogo}
         alt=""
         className="iconUserImg"
       />
