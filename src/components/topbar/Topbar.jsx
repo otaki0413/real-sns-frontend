@@ -1,3 +1,4 @@
+import { Chat, Notifications, Search } from "@mui/icons-material";
 import userLogo from "../../assets/person/1.jpeg";
 
 export const Topbar = () => {
@@ -8,6 +9,7 @@ export const Topbar = () => {
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
+          <Search className="searchIcon" />
           <input
             type="text"
             className="searchInput"
@@ -16,8 +18,12 @@ export const Topbar = () => {
         </div>
       </div>
       <div className="topbarRight">
-        <div className="iconMsg">1</div>
-        <div className="iconNotification">2</div>
+        <div className="icon">
+          <Chat className="chatIcon" />2
+        </div>
+        <div className="iconNotification">
+          <Notifications className="notificationIcon" />1
+        </div>
       </div>
       <img
         src={userLogo}
