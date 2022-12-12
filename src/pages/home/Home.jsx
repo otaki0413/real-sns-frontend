@@ -1,5 +1,12 @@
-import React from "react";
+import { Topbar } from "../../components/topbar/Topbar";
 
 export const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Topbar />
+      {/* sideber */}
+      {/* sideber */}
+      {/* sideber */}
+    </div>
+  );
 };
