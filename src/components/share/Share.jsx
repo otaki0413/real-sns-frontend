@@ -32,7 +32,8 @@ export const Share = () => {
             <div className="shareButton">
               <Gif
                 className="shareIcon"
-                htmlColor="hotpink"
+                htmlColor="red"
+                fontSize="large"
               />
               <span className="shareIconText">GIF</span>
             </div>
@@ -46,7 +47,7 @@ export const Share = () => {
             <div className="shareButton">
               <Analytics
                 className="shareIcon"
-                htmlColor="red"
+                htmlColor="purple"
               />
               <span className="shareIconText">投票</span>
             </div>
