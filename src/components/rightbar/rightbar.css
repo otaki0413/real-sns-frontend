@@ -69,3 +69,19 @@
 .rightbarUserName {
   font-weight: 550;
 }
+
+.promotionTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.rightbarPromotionImg {
+  width: 85%;
+  border-radius: 10px;
+  margin: 15px 0 0 0;
+}
+
+.promotionName {
+  font-size: small;
+  color: gray;
+}
