@@ -9,16 +9,18 @@ export const Post = () => {
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
-          <img
-            src={userLogo}
-            alt="ユーザのアイコンです"
-            className="postProfileImg"
-          />
-          <span className="postUserName">otaki</span>
-          <span className="postDate">5分前</span>
-        </div>
-        <div className="postRight">
-          <MoreVert />
+          <div className="postTopLeft">
+            <img
+              src={userLogo}
+              alt="ユーザのアイコンです"
+              className="postProfileImg"
+            />
+            <span className="postUserName">otaki</span>
+            <span className="postDate">5分前</span>
+          </div>
+          <div className="postTopRight">
+            <MoreVert />
+          </div>
         </div>
         <div className="postCenter">
           <span className="postText">ReactでSNSを作成中です</span>
