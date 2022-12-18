@@ -7,9 +7,8 @@ import {
   Search,
   Settings,
 } from "@mui/icons-material";
-import friendLogo2 from '../../assets/person/2.jpeg'
-import friendLogo3 from '../../assets/person/3.jpeg'
-import friendLogo4 from '../../assets/person/4.jpeg'
+import { CloseFriend } from "src/components/closeFriend/CloseFriend";
+import { Users } from "../../dummyData";
 import "./Sidebar.css";
 
 export const Sidebar = () => {
@@ -48,30 +47,12 @@ export const Sidebar = () => {
         </ul>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img
-              src={friendLogo2}
-              alt="フレンド2"
-              className="sidebarFriendImg"
+          {Users.map((user) => (
+            <CloseFriend
+              user={user}
+              key={user.id}
             />
-            <span className="sidebarFriendName">Otaki</span>
-          </li>
-          <li className="sidebarFriend">
-            <img
-              src={friendLogo3}
-              alt="フレンド2"
-              className="sidebarFriendImg"
-            />
-            <span className="sidebarFriendName">Tanaka</span>
-          </li>
-          <li className="sidebarFriend">
-            <img
-              src={friendLogo4}
-              alt="フレンド2"
-              className="sidebarFriendImg"
-            />
-            <span className="sidebarFriendName">Takegawa</span>
-          </li>
+          ))}
         </ul>
       </div>
     </div>
