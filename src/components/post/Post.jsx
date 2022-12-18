@@ -1,31 +1,35 @@
-import "./Post.css";
-import userLogo from "../../assets/person/1.jpeg";
 import { MoreVert } from "@mui/icons-material";
-import postImg1 from "../../assets/post/1.jpeg";
+import { Users } from "../../dummyData";
 import heartImg from "../../assets/heart.png";
+import "./Post.css";
 
-export const Post = () => {
+export const Post = (props) => {
+  const { post } = props;
+  const userName = Users.filter((user) => user.id === post.id)[0].username;
+  const profilePicture = Users.filter((user) => user.id === post.id)[0]
+    .profilePicture;
+
   return (
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
             <img
-              src={userLogo}
+              src={profilePicture}
               alt="ユーザのアイコンです"
               className="postProfileImg"
             />
-            <span className="postUserName">otaki</span>
-            <span className="postDate">5分前</span>
+            <span className="postUserName">{userName}</span>
+            <span className="postDate">{post.date}</span>
           </div>
           <div className="postTopRight">
             <MoreVert />
           </div>
         </div>
         <div className="postCenter">
-          <span className="postText">ReactでSNSを作成中です</span>
+          <span className="postText">{post.desc}</span>
           <img
-            src={postImg1}
+            src={post.photo}
             alt="投稿画像1"
             className="postImg"
           />
@@ -37,10 +41,12 @@ export const Post = () => {
               alt=""
               className="heartImg"
             />
-            <span className="postLikeCounter">5人がいいねを押しました</span>
+            <span className="postLikeCounter">
+              {post.like}人がいいねを押しました
+            </span>
           </div>
           <div className="postBottomRight">
-            <span className="postCommentText">4:コメント</span>
+            <span className="postCommentText">{post.comment}:コメント</span>
           </div>
         </div>
       </div>
