@@ -2,12 +2,21 @@ import { MoreVert } from "@mui/icons-material";
 import { Users } from "../../dummyData";
 import heartImg from "../../assets/heart.png";
 import "./Post.css";
+import { useState } from "react";
 
 export const Post = (props) => {
   const { post } = props;
+  const [like, setLike] = useState(post.like);
+  const [isLiked, setIsLiked] = useState(false);
   const userName = Users.filter((user) => user.id === post.id)[0].username;
   const profilePicture = Users.filter((user) => user.id === post.id)[0]
     .profilePicture;
+
+  // いいねボタン押下時の処理
+  const handleLike = () => {
+    setLike((currentCount) => (isLiked ? currentCount - 1 : currentCount + 1));
+    setIsLiked(!isLiked);
+  };
 
   return (
     <div className="post">
@@ -38,11 +47,12 @@ export const Post = (props) => {
           <div className="postBottomLeft">
             <img
               src={heartImg}
-              alt=""
+              alt="いいねの画像"
               className="heartImg"
+              onClick={() => handleLike()}
             />
             <span className="postLikeCounter">
-              {post.like}人がいいねを押しました
+              {like}人がいいねを押しました
             </span>
           </div>
           <div className="postBottomRight">
