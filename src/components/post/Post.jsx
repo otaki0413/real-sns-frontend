@@ -35,7 +35,7 @@ export const Post = () => {
             <img
               src={heartImg}
               alt=""
-              className="heartIcon"
+              className="heartImg"
             />
             <span className="postLikeCounter">5人がいいねを押しました</span>
           </div>

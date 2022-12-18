@@ -60,10 +60,10 @@
   align-items: center;
 }
 
-.heartIcon {
+.heartImg {
   width: 24px;
   height: 24px;
-  margin: 0 px;
+  margin-right: 5px;
   cursor: pointer;
 }
 
