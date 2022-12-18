@@ -1,10 +1,11 @@
 import "./Rightbar.css";
-import profileImg from "../../assets/person/1.jpeg";
 import promotionImg1 from "../../assets/promotion/promotion1.jpeg";
 import promotionImg2 from "../../assets/promotion/promotion2.jpeg";
 import promotionImg3 from "../../assets/promotion/promotion3.jpeg";
 import starImg from "../../assets/star.png";
 import eventImg from "../../assets/event.jpeg";
+import { Users } from "../../dummyData";
+import { Online } from "src/components/online/Online";
 
 export const Rightbar = () => {
   return (
@@ -27,28 +28,12 @@ export const Rightbar = () => {
         />
         <h4 className="rightbarTitle">オンラインの友達</h4>
         <ul className="rightbarFriendList">
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img
-                src={profileImg}
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnlineBadge"></span>
-            </div>
-            <span className="rightbarUserName">otaki</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img
-                src={profileImg}
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnlineBadge"></span>
-            </div>
-            <span className="rightbarUserName">otaki</span>
-          </li>
+          {Users.map((user) => (
+            <Online
+              user={user}
+              key={user.id}
+            />
+          ))}
         </ul>
         <p className="promotionTitle">プロモーション広告</p>
         <img
