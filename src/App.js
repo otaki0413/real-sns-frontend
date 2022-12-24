@@ -1,9 +1,10 @@
-import { Profile } from "src/pages/profile/Profile";
-// import { Home } from "./pages/home/Home";
+// import { Profile } from "src/pages/profile/Profile";
+import { Home } from "./pages/home/Home";
+// import { Login } from "src/pages/login/ Login";
+import { Register } from "src/pages/regisiter/Register";
 
 function App() {
-  return <Profile />;
-  // return <Home />;
+  return <Home />;
 }
 
 export default App;
