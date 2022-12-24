@@ -3,6 +3,7 @@ import { Profile } from "src/pages/profile/Profile";
 
 function App() {
   return <Profile />;
+  // return <Home />;
 }
 
 export default App;
