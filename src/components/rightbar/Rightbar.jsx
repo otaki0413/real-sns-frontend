@@ -1,4 +1,3 @@
-import "./Rightbar.css";
 import promotionImg1 from "../../assets/promotion/promotion1.jpeg";
 import promotionImg2 from "../../assets/promotion/promotion2.jpeg";
 import promotionImg3 from "../../assets/promotion/promotion3.jpeg";
@@ -6,6 +5,7 @@ import starImg from "../../assets/star.png";
 import eventImg from "../../assets/event.jpeg";
 import { Users } from "../../dummyData";
 import { Online } from "src/components/online/Online";
+import "./Rightbar.css";
 
 export const Rightbar = () => {
   return (
