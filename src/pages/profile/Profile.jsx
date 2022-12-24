@@ -25,10 +25,12 @@ export const Profile = () => {
                 alt=""
                 className="profilePersonImg"
               />
-              <div className="profileInfo">
-                <h4 className="profileInfoName">Otaki</h4>
-                <span className="profileInfoDesc">プログラミングを勉強しています。</span>
-              </div>
+            </div>
+            <div className="profileInfo">
+              <h4 className="profileInfoName">Otaki</h4>
+              <span className="profileInfoDesc">
+                プログラミングを勉強しています。
+              </span>
             </div>
           </div>
           <div className="profileRightBottom">
