@@ -1,4 +1,5 @@
 import { Chat, Notifications, Search } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 import userLogo from "../../assets/person/1.jpeg";
 import "./Topbar.css";
 
@@ -6,7 +7,9 @@ export const Topbar = () => {
   return (
     <div className="container">
       <div className="topbarLeft">
-        <span className="logo">Real SNS</span>
+        <Link to="/" style={{ textDecoration: "none"  }}>
+          <span className="logo">Real SNS</span>
+        </Link>
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
